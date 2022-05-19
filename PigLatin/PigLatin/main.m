@@ -7,16 +7,16 @@
 
 #import <Foundation/Foundation.h>
 #import "NSString+PigLatinConvert.h"
-bool isVowel(char c)
-    {
-        return (c == 'A' || c == 'E' ||
-                c == 'I' || c == 'O' ||
-                c == 'U' || c == 'a' ||
-                c == 'e' || c == 'i' ||
-                c == 'o' || c == 'u');
-            
-   // NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
-    }
+//bool isVowel(char c)
+//    {
+//        return (c == 'A' || c == 'E' ||
+//                c == 'I' || c == 'O' ||
+//                c == 'U' || c == 'a' ||
+//                c == 'e' || c == 'i' ||
+//                c == 'o' || c == 'u');
+//            
+//   // NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
+//    }
 NSString *getUserInput(NSString *prompt) {
    
     // 1. array of chars
@@ -46,6 +46,22 @@ restartprogram:
                 while (i< (long)arrysize){
                     NSString *arrWord = mutableWords[i];
                     arrWord = [arrWord stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                    NSString *first2OfWord = [arrWord substringToIndex:2];  //word first 2 letters
+                    NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
+                    BOOL isTheObjectThere = [clusters containsObject: first2OfWord];
+                    if (isTheObjectThere == true) {
+                        NSString *toEnd = [arrWord substringFromIndex:2];
+                        NSString *fromBegin = [arrWord substringToIndex:2];
+                        arrWord = [toEnd stringByAppendingString:fromBegin];
+                        mutableWords[i] = arrWord;
+                        NSString *plword = [mutableWords[i] stringByPigLatinization];
+                                     
+                        arrWord = mutableWords[i];
+                        arrWord = [arrWord stringByAppendingString:plword];
+                        mutableWords[i] = arrWord;
+                        //NSLog(@"%@",arrWord);
+                        i += 1;
+                    } else {
                     NSString *toEnd = [arrWord substringFromIndex:1];
                     NSString *fromBegin = [arrWord substringToIndex:1];
                     arrWord = [toEnd stringByAppendingString:fromBegin];
@@ -59,7 +75,7 @@ restartprogram:
                     //NSLog(@"%@",arrWord);
                     i += 1;
                 }
-               
+                }
                 NSString *str = [mutableWords componentsJoinedByString:@" "];
                 NSLog(@"%@",str);
                 goto restartprogram;
