@@ -40,7 +40,7 @@ restartprogram:
             else {
                 NSMutableArray *mutableWords = [[inputString componentsSeparatedByString: @" "] mutableCopy];
                 
-//                NSString *word1 = [mutableWords objectAtIndex:2];
+//              NSString *word1 = [mutableWords objectAtIndex:2];
                 NSInteger *arrysize = [mutableWords count];
                 int i = 0;
                 while (i< (long)arrysize){
@@ -62,9 +62,10 @@ restartprogram:
                
                 NSString *str = [mutableWords componentsJoinedByString:@" "];
                 NSLog(@"%@",str);
-              
+                goto restartprogram;
                 
     }
+        
     return 0;
 }
 }
