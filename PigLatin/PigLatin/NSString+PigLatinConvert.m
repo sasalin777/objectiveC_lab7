@@ -9,6 +9,7 @@
 
 @implementation NSString (PigLatinConvert)
 -(NSString *)stringByPigLatinization {
+    
     NSString *pl = @"ay";
     return pl;
 }

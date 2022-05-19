@@ -39,9 +39,31 @@ restartprogram:
             }
             else {
                 NSMutableArray *mutableWords = [[inputString componentsSeparatedByString: @" "] mutableCopy];
-                NSString *word1 = [mutableWords objectAtIndex:2];
-                NSString *plword =[word1 stringByPigLatinization];
-                NSLog(@"%@",plword);
+                
+//                NSString *word1 = [mutableWords objectAtIndex:2];
+                NSInteger *arrysize = [mutableWords count];
+                int i = 0;
+                while (i< (long)arrysize){
+                    NSString *arrWord = mutableWords[i];
+                    arrWord = [arrWord stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                    NSString *toEnd = [arrWord substringFromIndex:1];
+                    NSString *fromBegin = [arrWord substringToIndex:1];
+                    arrWord = [toEnd stringByAppendingString:fromBegin];
+                    mutableWords[i] = arrWord;
+                    //+ay
+                    NSString *plword = [mutableWords[i] stringByPigLatinization];
+                                 
+                    arrWord = mutableWords[i];
+                    arrWord = [arrWord stringByAppendingString:plword];
+                    mutableWords[i] = arrWord;
+                    //NSLog(@"%@",arrWord);
+                    i += 1;
+                }
+               
+                NSString *str = [mutableWords componentsJoinedByString:@" "];
+                NSLog(@"%@",str);
+              
+                
     }
     return 0;
 }
