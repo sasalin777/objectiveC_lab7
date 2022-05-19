@@ -7,7 +7,7 @@
 
 #import "NSObject+NSString_MyPigLatin.h"
 
-@implementation NSObject (NSString_MyPigLatin)
+@implementation NSString (NSString_MyPigLatin)
 
 ​- NSString *)stringByPigLatinization​:(NSString *)string {
 

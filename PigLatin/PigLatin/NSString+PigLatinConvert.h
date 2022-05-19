@@ -1,5 +1,5 @@
 //
-//  NSObject+NSString_MyPigLatin.h
+//  NSString+PigLatinConvert.h
 //  PigLatin
 //
 //  Created by Li Tzu Lin on 2022-05-18.
@@ -9,9 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (NSString_MyPigLatin)
+@interface NSString (PigLatinConvert)
 
-- (NSString *)stringByPigLatinization​:(NSString *)string;
+
+-(NSString *)stringByPigLatinization;
+
+-(NSString *)pl;
 
 @end
 

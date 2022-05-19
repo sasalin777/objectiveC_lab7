@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F771FDA728358EC80069CECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F771FDA628358EC80069CECA /* main.m */; };
-		F771FDAF28358F7A0069CECA /* NSObject+NSString_MyPigLatin.m in Sources */ = {isa = PBXBuildFile; fileRef = F771FDAE28358F7A0069CECA /* NSObject+NSString_MyPigLatin.m */; };
+		F771FDB22835A3220069CECA /* NSString+PigLatinConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = F771FDB12835A3220069CECA /* NSString+PigLatinConvert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		F771FDA328358EC80069CECA /* PigLatin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PigLatin; sourceTree = BUILT_PRODUCTS_DIR; };
 		F771FDA628358EC80069CECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F771FDAD28358F7A0069CECA /* NSObject+NSString_MyPigLatin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSString_MyPigLatin.h"; sourceTree = "<group>"; };
-		F771FDAE28358F7A0069CECA /* NSObject+NSString_MyPigLatin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSString_MyPigLatin.m"; sourceTree = "<group>"; };
+		F771FDB02835A3220069CECA /* NSString+PigLatinConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PigLatinConvert.h"; sourceTree = "<group>"; };
+		F771FDB12835A3220069CECA /* NSString+PigLatinConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PigLatinConvert.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F771FDA628358EC80069CECA /* main.m */,
-				F771FDAD28358F7A0069CECA /* NSObject+NSString_MyPigLatin.h */,
-				F771FDAE28358F7A0069CECA /* NSObject+NSString_MyPigLatin.m */,
+				F771FDB02835A3220069CECA /* NSString+PigLatinConvert.h */,
+				F771FDB12835A3220069CECA /* NSString+PigLatinConvert.m */,
 			);
 			path = PigLatin;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F771FDA728358EC80069CECA /* main.m in Sources */,
-				F771FDAF28358F7A0069CECA /* NSObject+NSString_MyPigLatin.m in Sources */,
+				F771FDB22835A3220069CECA /* NSString+PigLatinConvert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

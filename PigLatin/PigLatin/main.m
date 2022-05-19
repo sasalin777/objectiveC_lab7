@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+PigLatinConvert.h"
 bool isVowel(char c)
     {
         return (c == 'A' || c == 'E' ||
@@ -17,7 +18,7 @@ bool isVowel(char c)
    // NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
     }
 NSString *getUserInput(NSString *prompt) {
-    
+   
     // 1. array of chars
     char inputChars[255];
     NSLog(@"%@", prompt);
@@ -38,9 +39,9 @@ restartprogram:
             }
             else {
                 NSMutableArray *mutableWords = [[inputString componentsSeparatedByString: @" "] mutableCopy];
-                NSString *word1 = [mutableWords objectAtIndex:0];
-                
-                NSLog(@"%@",word1);
+                NSString *word1 = [mutableWords objectAtIndex:2];
+                NSString *plword =[word1 stringByPigLatinization];
+                NSLog(@"%@",plword);
     }
     return 0;
 }
